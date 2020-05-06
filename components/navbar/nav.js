@@ -44,7 +44,7 @@ const Nav = () => {
 				<a>
 					<img
 						className={styles.logo}
-						style={windowWidth > 690 ? { height: '40px' } : {}}
+						style={windowWidth < 690 ? { height: '35px' } : {}}
 						src={
 							windowWidth > 690
 								? '../../static/images/logo.png'

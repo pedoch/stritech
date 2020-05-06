@@ -9,6 +9,102 @@ const links = [{ href: '/our-firm', label: 'Our Offices' }].map((link) => {
 });
 
 const Footer = () => {
+	const footerLinks = [
+		{
+			title: 'About',
+			links: [
+				{
+					text: 'Why StriTech?',
+					link: '/about',
+				},
+				{
+					text: 'Our Work',
+					link: '/work',
+				},
+				{
+					text: 'Testemonials',
+					link: '/testemonials',
+				},
+				{
+					text: 'Terms of Service & Privacy',
+					link: '/privacy',
+				},
+			],
+		},
+		{
+			title: 'Services',
+			links: [
+				{
+					text: 'Web & Mobile Design',
+					link: '/services/#web-mobile-design',
+				},
+				{
+					text: 'Web & Mobile Development',
+					link: '/services/#web-mobile-development',
+				},
+				{
+					text: 'Ecommerce Sites',
+					link: '/services/#ecommerce',
+				},
+				{
+					text: 'Design Consultation',
+					link: '/services/#design-consultation',
+				},
+				{
+					text: 'Web & Mobile Maintenance',
+					link: '/services/#web-mobile-maintenance',
+				},
+			],
+		},
+
+		{
+			title: 'Tools',
+			links: [
+				{
+					text: 'React JS',
+					link: '/tools/#reactjs',
+				},
+				{
+					text: 'React Native',
+					link: '/tools/#reactnative',
+				},
+				{
+					text: 'Node JS',
+					link: '/tools/#node',
+				},
+				{
+					text: 'MongoDB',
+					link: '/tools/#mongodb',
+				},
+				{
+					text: 'Python',
+					link: '/tools/#python',
+				},
+			],
+		},
+		{
+			title: 'Connect',
+			links: [
+				{
+					text: 'Contact',
+					link: '/contact',
+				},
+				{
+					text: 'Careers',
+					link: '/careers',
+				},
+				{
+					text: 'Twitter',
+					link: '/#',
+				},
+				{
+					text: 'LinkedIn',
+					link: '/#',
+				},
+			],
+		},
+	];
+
 	const [path, setPath] = useState('/');
 
 	useEffect(() => {
@@ -17,7 +113,36 @@ const Footer = () => {
 
 	return (
 		<footer className={[styles.footer].join(' ')}>
-			<p>&copy;&nbsp; 2020 StriTech</p>
+			<div className={styles.info}>
+				<span className={styles.intro}>
+					<img src='../../static/images/logofull.png' className={styles.logo} />
+					<p>Take your ideas to the next level</p>
+					<h3>Let's work together...</h3>
+					<p style={{ marginBottom: '5px' }}>Email: pedroogheneochuko@gmail.com</p>
+					<p>Phone: +2349073707630</p>
+				</span>
+				{footerLinks.map((cat, index) => {
+					return (
+						<span key={index} className={styles.list}>
+							<h4>{cat.title}</h4>
+							<ul>
+								{cat.links.map((link, indx) => {
+									return (
+										<Link key={indx} href={link.link}>
+											<a>
+												<li>{link.text}</li>
+											</a>
+										</Link>
+									);
+								})}
+							</ul>
+						</span>
+					);
+				})}
+			</div>
+			<p style={{ alignSelf: 'center' }}>
+				Copyright &nbsp;&copy;&nbsp; 2020 StriTech. All rights reserved
+			</p>
 			<style jsx>{`
 				:global(body) {
 					margin: 0;
