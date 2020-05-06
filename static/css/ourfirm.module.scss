@@ -1,0 +1,87 @@
+.ourFirmMain {
+	width: 100%;
+	min-height: 100%;
+	padding-top: 70px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #f9f9f9;
+	background-color: #091f36;
+
+	.container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		.hero {
+			width: 100%;
+			height: 300px;
+			background-image: url('https://res.cloudinary.com/dsbogvjcc/image/upload/v1588472015/furst/hero_m0s9mf.jpg');
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		.block {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 30px 8px;
+
+			.top {
+				color: #f9f9f9;
+				font-size: 40px;
+				overflow: hidden;
+				position: relative;
+				white-space: nowrap;
+				width: 160px;
+				border-right: 2px solid rgba(255, 255, 255, 0);
+				animation: typewriter 2s steps(8) 1s 1 normal both,
+					cursorblink 400ms steps(22) 1s infinite normal;
+			}
+
+			.subblock {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		.block + .block {
+			border-top: 1px solid #f9f9f9;
+		}
+	}
+
+	.topics {
+		min-width: 250px;
+		color: #f9f9f9;
+	}
+
+	p {
+		font-size: 17px;
+		max-width: 700px;
+		min-width: 200px;
+	}
+
+	@keyframes typewriter {
+		from {
+			width: 0;
+		}
+
+		to {
+			width: 300;
+		}
+	}
+
+	@keyframes cursorblink {
+		from {
+			border-right-color: rgba(255, 255, 255, 0.75);
+		}
+		to {
+			border-right-color: rgba(255, 255, 255, 0);
+		}
+	}
+}
