@@ -1,4 +1,4 @@
-// import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
 // import '../static/css/index.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import '../components/tabs/tab.module.css';

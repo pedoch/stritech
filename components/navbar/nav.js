@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-// import { Drawer, Button } from 'antd';
-// import { MenuOutlined } from '@ant-design/icons';
+import { Drawer, Button } from 'antd';
+import { MenuOutlined } from '@ant-design/icons';
 
 import styles from './nav.module.scss';
 
 const links = [
-	{ href: '/services', label: 'Service' },
+	{ href: '/services', label: 'Services' },
 	{ href: '/work', label: 'Work' },
-	{ href: '/why-us', label: 'Why StriTech' },
+	{ href: '/why-us', label: 'Why StriTech?' },
 	{ href: '/contact', label: 'Contact' },
 ].map((link) => {
 	link.key = `nav-link-${link.href}-${link.label}`;
@@ -19,7 +19,7 @@ const links = [
 const Nav = () => {
 	const [path, setPath] = useState('/');
 	const [windowWidth, setWindowWidth] = useState(0);
-	// const [drawerVisible, setDrawerVisible] = useState(false);
+	const [drawerVisible, setDrawerVisible] = useState(false);
 
 	useEffect(() => {
 		setWindowWidth(window.innerWidth);
@@ -31,13 +31,13 @@ const Nav = () => {
 		setPath(window.location.pathname);
 	}, []);
 
-	// const onShowDrawer = () => {
-	// 	setDrawerVisible(true);
-	// };
+	const onShowDrawer = () => {
+		setDrawerVisible(true);
+	};
 
-	// const onDrawerClose = () => {
-	// 	setDrawerVisible(false);
-	// };
+	const onDrawerClose = () => {
+		setDrawerVisible(false);
+	};
 	return (
 		<nav className={[styles.nav].join(' ')}>
 			<Link href='/'>
@@ -62,12 +62,12 @@ const Nav = () => {
 					</Link>
 				))}
 			</ul>
-			{/* <Button
+			<Button
 				type='primary'
 				className={[styles.menu, windowWidth < 690 && styles.display].join(' ')}
 				onClick={onShowDrawer}
 			>
-				<MenuOutlined style={{ fontSize: '16px' }} />
+				<MenuOutlined style={{ fontSize: '16px', color: '#040404' }} />
 			</Button>
 			<Drawer
 				title='Menu'
@@ -82,7 +82,7 @@ const Nav = () => {
 						<a>{label}</a>
 					</Link>
 				))}
-			</Drawer> */}
+			</Drawer>
 			<style jsx>{`
 				:global(body) {
 					margin: 0;

@@ -60,11 +60,16 @@
 	border: 0px;
 }
 
+.menu:hover {
+	background: none;
+	border: 1px solid #fbe2b1;
+}
+
 .drawer {
 	a {
 		margin-bottom: 10px;
-		font-size: 18px;
-		color: #f9f9f9;
+		font-size: 15px;
+		color: #040404;
 	}
 }
 
