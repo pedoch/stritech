@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -19,33 +19,36 @@ const Home = () => {
 	const whatWeDoList = [
 		{
 			title: 'Web & Mobile Design',
-			text: 'We deisgn simple modern responsive wesites/applications',
+			text: 'We deisgn simple modern responsive web and mobile applications.',
 			icon: <LayoutOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
 			link: '/services/#web-mobile-design',
 		},
 		{
 			title: 'Web & Mobile Development',
-			text: 'We deisgn simple modern responsive wesites/applications',
+			text:
+				'We develop functional, scalable and efficient web and mobile applications.',
 			icon: <CodeOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
 			link: '/services/#web-mobile-development',
 		},
 		{
 			title: 'Ecommerce Sites',
-			text: 'We deisgn simple modern responsive wesites/applications',
+			text:
+				'We build user friendly e-commerce sites from small to large businesses.',
 			icon: (
 				<ShoppingCartOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />
 			),
 			link: '/services/#ecommerce',
 		},
-		{
-			title: 'Design Consultation',
-			text: 'We deisgn simple modern responsive wesites/applications',
-			icon: <TeamOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
-			link: '/services/#design-consultation',
-		},
+		// {
+		// 	title: 'Design Consultation',
+		// 	text: 'We provide consultations to clients for web and mobile applications.',
+		// 	icon: <TeamOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
+		// 	link: '/services/#design-consultation',
+		// },
 		{
 			title: 'Web & Mobile Maintenance',
-			text: 'We deisgn simple modern responsive wesites/applications',
+			text:
+				'We maintain already built web and mobile applications and help with scalability.',
 			icon: <SettingOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
 			link: '/services/#web-mobile-maintenance',
 		},
@@ -98,7 +101,7 @@ const Home = () => {
 									<Link key={index} href={item.link}>
 										<a>
 											<Card>
-												<section style={{ display: 'flex', flexDirection: 'column' }}>
+												<section className={styles.cardLay}>
 													<h3>{item.title}</h3>
 													{item.icon}
 													<p>{item.text}</p>
@@ -108,24 +111,6 @@ const Home = () => {
 									</Link>
 								);
 							})}
-						</div>
-					</section>
-					<span className={styles.triangleReverse}></span>
-					<section className={[styles.section, styles.primary].join(' ')}>
-						<div className={[styles.block, styles.contact].join(' ')}>
-							<p>Ready to get started?</p>
-							<Link href='/contact'>
-								<a>
-									<h1>Tell Us About Your Project...</h1>
-								</a>
-							</Link>
-						</div>
-						<div className={[styles.block].join(' ')}>
-							<img
-								className={styles.hero}
-								src='../static/images/design4.svg'
-								alt='contact us'
-							/>
 						</div>
 					</section>
 				</div>

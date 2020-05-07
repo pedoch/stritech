@@ -113,6 +113,24 @@ const Footer = () => {
 
 	return (
 		<footer className={[styles.footer].join(' ')}>
+			{/* <span className={styles.triangleReverse}></span> */}
+			<section className={[styles.section, styles.primary].join(' ')}>
+				<div className={[styles.block, styles.contact].join(' ')}>
+					<p>Ready to get started?</p>
+					<Link href='/contact'>
+						<a>
+							<h1>Tell Us About Your Project...</h1>
+						</a>
+					</Link>
+				</div>
+				<div className={[styles.block].join(' ')}>
+					<img
+						className={styles.hero}
+						src='../static/images/design4.svg'
+						alt='contact us'
+					/>
+				</div>
+			</section>
 			<div className={styles.info}>
 				<span className={styles.intro}>
 					<img src='../../static/images/logofull.png' className={styles.logo} />
@@ -124,7 +142,7 @@ const Footer = () => {
 				{footerLinks.map((cat, index) => {
 					return (
 						<span key={index} className={styles.list}>
-							<h4>{cat.title}</h4>
+							<h3>{cat.title}</h3>
 							<ul>
 								{cat.links.map((link, indx) => {
 									return (
