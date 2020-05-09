@@ -65,7 +65,7 @@ export default function contact() {
 					project: '',
 				});
 				toaster.success('Mail sent!', {
-					description: `We're happy to hear from your!!!`,
+					description: `Thank you for reaching out!!!`,
 				});
 			})
 			.catch((err) => {
