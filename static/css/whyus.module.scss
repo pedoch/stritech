@@ -51,10 +51,39 @@
 					align-items: center;
 					justify-content: center;
 					flex-wrap: wrap;
+					margin-bottom: 30px;
 
 					.text {
 						margin-bottom: 5px;
-						font-size: 18px;
+						font-size: 17px;
+
+						.name {
+							font-size: 23px;
+
+							span {
+								color: grey;
+							}
+						}
+
+						.name + p {
+							text-align: justify;
+						}
+					}
+				}
+
+				.found {
+					align-items: flex-start !important;
+					.attention {
+						max-width: 320px;
+						margin: 5px;
+
+						p {
+							font-size: 16px;
+						}
+					}
+
+					h1 {
+						font-size: 40px;
 					}
 				}
 
@@ -95,25 +124,6 @@
 				a:hover {
 					text-decoration-line: line-through;
 					text-decoration-color: #040404;
-				}
-			}
-
-			.cardCont {
-				max-width: 1200px !important;
-				justify-content: center !important;
-
-				a {
-					margin: 10px;
-					display: flex;
-
-					.cardLay {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						justify-content: space-around;
-						height: 100%;
-						width: 100%;
-					}
 				}
 			}
 		}

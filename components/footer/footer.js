@@ -15,7 +15,7 @@ const Footer = () => {
 			links: [
 				{
 					text: 'Why StriTech?',
-					link: '/about',
+					link: '/why-us',
 				},
 				{
 					text: 'Our Work',
@@ -47,38 +47,8 @@ const Footer = () => {
 					link: '/services/#ecommerce',
 				},
 				{
-					text: 'Design Consultation',
-					link: '/services/#design-consultation',
-				},
-				{
 					text: 'Web & Mobile Maintenance',
 					link: '/services/#web-mobile-maintenance',
-				},
-			],
-		},
-
-		{
-			title: 'Tools',
-			links: [
-				{
-					text: 'React JS',
-					link: '/tools/#reactjs',
-				},
-				{
-					text: 'React Native',
-					link: '/tools/#reactnative',
-				},
-				{
-					text: 'Node JS',
-					link: '/tools/#node',
-				},
-				{
-					text: 'MongoDB',
-					link: '/tools/#mongodb',
-				},
-				{
-					text: 'Python',
-					link: '/tools/#python',
 				},
 			],
 		},
@@ -104,6 +74,32 @@ const Footer = () => {
 			],
 		},
 	];
+
+	const tools = {
+		title: 'Tools',
+		links: [
+			{
+				text: 'React JS',
+				link: 'https://reactjs.org/',
+			},
+			{
+				text: 'React Native',
+				link: 'https://reactnative.dev/',
+			},
+			{
+				text: 'Node JS',
+				link: 'https://nodejs.org/',
+			},
+			{
+				text: 'MongoDB',
+				link: 'https://www.mongodb.com/',
+			},
+			{
+				text: 'Python',
+				link: 'https://www.python.org/',
+			},
+		],
+	};
 
 	const [path, setPath] = useState('/');
 
@@ -157,6 +153,20 @@ const Footer = () => {
 						</span>
 					);
 				})}
+				{
+					<span className={styles.list}>
+						<h3>{tools.title}</h3>
+						<ul>
+							{tools.links.map((link, indx) => {
+								return (
+									<a href={link.link} target='_blank'>
+										<li>{link.text}</li>
+									</a>
+								);
+							})}
+						</ul>
+					</span>
+				}
 			</div>
 			<p style={{ alignSelf: 'center' }}>
 				Copyright &nbsp;&copy;&nbsp; 2020 StriTech. All rights reserved

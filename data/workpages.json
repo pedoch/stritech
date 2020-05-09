@@ -1,0 +1,33 @@
+[
+	{
+		"id": "furstlegal",
+		"title": "FurstLegal",
+		"clip": "A fresh look for a briliant law firm",
+		"color": "#f9f9f9",
+		"backgroundColor": "#303542",
+		"images": {
+			"mobile": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968716/StriTech/work/furstlegal/furstlegal-mobile_l3i2fl.png",
+			"web": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588973918/StriTech/work/furstlegal/furstlegal-web_uyysd7.png",
+			"full": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968720/StriTech/work/furstlegal/furstlegal-full_flyvas.png"
+		},
+		"tool": "Legal | Web",
+		"problem": "A small law firm needed to gain more clients. They needed a website where cients could guage the experience and what they have to offer.",
+		"steps": [
+			[
+				"Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
+			],
+			[
+				"We deisgned them a simple but catchy front page. We went for a dark theme because it's eye friendly and looks elite (the way a law firm should look).",
+				"We added an easily accessible navigation bar which links to all the major pages of the website."
+			],
+			[
+				"Each page was straight to the point and easy to read. The law is often straight forward, so should the site",
+				"Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
+			],
+			[
+				"Finally we host the site on Netlify, which enables us to use the continuous development feature.",
+				"This means we can make changes to the site and have them automatically added to the already deployed site."
+			]
+		]
+	}
+]

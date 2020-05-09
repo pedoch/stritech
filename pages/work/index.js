@@ -2,16 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import MainLayout from '../components/mainlayout/mainlayout';
+import MainLayout from '../../components/mainlayout/mainlayout';
 
-import styles from '../static/css/work.module.scss';
+import styles from '../../static/css/work.module.scss';
 
-export default function work() {
-	const workList = [
-		{
-			title: 'FurstLegal',
-		},
-	];
+export default function work({ workList }) {
 	return (
 		<MainLayout>
 			<Head>
@@ -28,31 +23,31 @@ export default function work() {
 						</div>
 					</section>
 					<section className={styles.section}>
-						<div
-							className={styles.block}
-							style={{
-								color: '#f9f9f9',
-								backgroundColor: '#303542',
-							}}
-						>
-							<div
-								className={styles.case}
-								style={{
-									// alignSelf: 'flex-start',
-									backgroundColor: '#303542',
-								}}
-							>
-								<h1>FurstLegal</h1>
-								<p>A fresh look for a briliant law firm</p>
-								<Link href='/work/furstlegal'>
-									<a style={{ color: '#f9f9f9' }}>
-										<p>Read Case Study</p>
-									</a>
-								</Link>
-								<img src='../static/images/work/furstlegal/furstlegal-full.png' />
-								<p style={{ alignSelf: 'flex-start' }}>Legal | Web</p>
-							</div>
-							{/* <div
+						{workList.map((work, index) => {
+							return (
+								<div
+									className={[styles.block, styles.caseCont].join(' ')}
+									key={work.slug + index}
+									style={{
+										color: work.color,
+										backgroundColor: work.backgroundColor,
+									}}
+								>
+									<div className={styles.case}>
+										<h1>{work.title}</h1>
+										<p>{work.clip}</p>
+										<Link href={`/work/${work.id}`}>
+											<a style={{ color: work.color }}>
+												<p>Read Case Study</p>
+											</a>
+										</Link>
+										<img src={`${work.images.full}`} />
+										<p style={{ alignSelf: 'flex-start' }}>{work.tool}</p>
+									</div>
+								</div>
+							);
+						})}
+						{/* <div
 								className={styles.case}
 								style={{
 									alignSelf: 'flex-end',
@@ -68,10 +63,19 @@ export default function work() {
 								</Link>
 								<img src='../static/images/work/furstlegal/furstlegal-full.png' />
 							</div> */}
-						</div>
 					</section>
 				</div>
 			</div>
 		</MainLayout>
 	);
+}
+
+export async function getStaticProps() {
+	const workList = (await import(`../../data/workpages.json`)).default;
+
+	return {
+		props: {
+			workList,
+		},
+	};
 }
