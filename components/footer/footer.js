@@ -110,7 +110,13 @@ const Footer = () => {
 	return (
 		<footer className={[styles.footer].join(' ')}>
 			{/* <span className={styles.triangleReverse}></span> */}
-			<section className={[styles.section, styles.primary].join(' ')}>
+			<section
+				className={[
+					styles.section,
+					styles.primary,
+					path === '/contact' && styles.nodisplay,
+				].join(' ')}
+			>
 				<div className={[styles.block, styles.contact].join(' ')}>
 					<p>Ready to get started?</p>
 					<Link href='/contact'>
