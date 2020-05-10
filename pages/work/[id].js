@@ -10,7 +10,7 @@ export default function WorkPages({ page }) {
 	return (
 		<MainLayout>
 			<Head>
-				<title>Case Study: FurstLegal | StriTech</title>
+				<title>Case Study: {page.title} | StriTech</title>
 			</Head>
 			<div className={styles.workPagesMain}>
 				<section className={styles.container}>
