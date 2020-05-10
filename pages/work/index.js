@@ -27,7 +27,7 @@ export default function work({ workList }) {
 							return (
 								<div
 									className={[styles.block, styles.caseCont].join(' ')}
-									key={work.slug + index}
+									key={work.id + index}
 									style={{
 										color: work.color,
 										backgroundColor: work.backgroundColor,
@@ -42,27 +42,11 @@ export default function work({ workList }) {
 											</a>
 										</Link>
 										<img src={`${work.images.full}`} />
-										<p style={{ alignSelf: 'flex-start' }}>{work.tool}</p>
+										<p>{work.tool}</p>
 									</div>
 								</div>
 							);
 						})}
-						{/* <div
-								className={styles.case}
-								style={{
-									alignSelf: 'flex-end',
-									backgroundColor: 'firebrick',
-								}}
-							>
-								<h1>FurstLegal</h1>
-								<p>Hello</p>
-								<Link href='#'>
-									<a style={{ color: '#f9f9f9' }}>
-										<p>Read Case Study</p>
-									</a>
-								</Link>
-								<img src='../static/images/work/furstlegal/furstlegal-full.png' />
-							</div> */}
 					</section>
 				</div>
 			</div>

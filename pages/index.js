@@ -67,7 +67,7 @@ const Home = () => {
 					<section className={styles.section}>
 						<div className={[styles.block, styles.reverseWrap].join(' ')}>
 							<p>
-								StriTech, founded in 2020, is a digital product and innovation agency
+								StriTech, conceived in 2018, is a digital product and innovation agency
 								focused on giving you entrensic design and functional web and mobile
 								applications.
 							</p>

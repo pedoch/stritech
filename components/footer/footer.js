@@ -23,12 +23,12 @@ const Footer = () => {
 				},
 				{
 					text: 'Testemonials',
-					link: '/testemonials',
+					link: '/testimonials',
 				},
-				{
-					text: 'Terms of Service & Privacy',
-					link: '/privacy',
-				},
+				// {
+				// 	text: 'Terms of Service & Privacy',
+				// 	link: '/terms-of-service',
+				// },
 			],
 		},
 		{
