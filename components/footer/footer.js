@@ -138,8 +138,15 @@ const Footer = () => {
 					<img src='../../static/images/logofull.png' className={styles.logo} />
 					<p>Take your ideas to the next level</p>
 					<h3>Let's work together...</h3>
-					<p style={{ marginBottom: '5px' }}>Email: pedroogheneochuko@gmail.com</p>
-					<p>Phone: +2349073707630</p>
+					<p style={{ marginBottom: '5px' }}>
+						Email:{' '}
+						<a href='mailto:pedroogheneochuko@gmail.com'>
+							pedroogheneochuko@gmail.com
+						</a>
+					</p>
+					<p>
+						Phone: <a href='tel:+2349073707630'>+2349073707630</a>
+					</p>
 				</span>
 				{footerLinks.map((cat, index) => {
 					return (
