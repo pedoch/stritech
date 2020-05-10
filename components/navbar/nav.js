@@ -7,9 +7,9 @@ import { MenuOutlined } from '@ant-design/icons';
 import styles from './nav.module.scss';
 
 const links = [
+	{ href: '/why-us', label: 'Why StriTech?' },
 	{ href: '/services', label: 'Services' },
 	{ href: '/work', label: 'Work' },
-	{ href: '/why-us', label: 'Why StriTech?' },
 	{ href: '/contact', label: 'Contact' },
 ].map((link) => {
 	link.key = `nav-link-${link.href}-${link.label}`;
