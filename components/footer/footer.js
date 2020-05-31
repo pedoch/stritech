@@ -170,9 +170,9 @@ const Footer = () => {
           <span className={styles.list}>
             <h3>{tools.title}</h3>
             <ul>
-              {tools.links.map((link, indx) => {
+              {tools.links.map((link, index) => {
                 return (
-                  <a href={link.link} target='_blank'>
+                  <a href={link.link} key={index} target='_blank'>
                     <li>{link.text}</li>
                   </a>
                 );

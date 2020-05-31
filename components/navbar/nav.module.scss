@@ -1,94 +1,96 @@
 .nav {
-	display: flex;
-	justify-content: space-around;
-	padding: 0px;
-	align-items: center;
-	position: fixed;
-	top: 0px;
-	width: 100%;
-	min-height: 50px;
-	background-color: #f8f8f8;
-	z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-height: 50px;
+  background-color: #f8f8f8;
+  z-index: 5;
 
-	ul {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 0px;
-		width: 100%;
-		max-width: 400px;
-		padding: 0px 16px;
-		height: 100%;
-		color: #040404;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+    max-width: 400px;
+    padding: 0px 16px;
+    height: 100%;
+    color: #040404;
 
-		a {
-			border-bottom: 1px solid rgba(0, 0, 0, 0);
-			height: 50%;
+    a {
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+      height: 50%;
 
-			li {
-				display: flex;
-				height: 50%;
-				align-items: center;
-				padding: 6px 8px;
-			}
-		}
+      li {
+        display: flex;
+        height: 50%;
+        align-items: center;
+        padding: 6px 8px;
+      }
+    }
 
-		a + a {
-			margin-left: 5px;
-		}
+    a + a {
+      margin-left: 5px;
+    }
 
-		a:hover {
-			border-bottom: 1px solid grey;
-		}
-	}
+    a:hover {
+      border-bottom: 1px solid grey;
+    }
+  }
 
-	.active {
-		// color: #fec75c !important;
-		border-bottom: 1px solid #fec75c;
-	}
+  .active {
+    // color: #fec75c !important;
+    border-bottom: 1px solid #fec75c;
+  }
 
-	a {
-		color: #040404;
-		text-decoration: none;
-		font-size: 15px;
-		font-weight: bold;
-		height: 100%;
-	}
+  a {
+    color: #040404;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    height: 100%;
+  }
 }
 
 .menu {
-	display: none;
-	background: none;
-	border: 0px;
+  display: none;
+  background: none;
+  border: 1px solid lightgrey;
+  box-shadow: none;
+  border-radius: 5px;
 }
 
 .menu:hover {
-	background: none;
-	border: 1px solid #fbe2b1;
+  background: none;
+  border: 1px solid #fbe2b1;
 }
 
 .drawer {
-	a {
-		margin-bottom: 10px;
-		font-size: 15px;
-		color: #040404;
-	}
+  a {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #040404;
+  }
 }
 
 .display {
-	display: block !important;
+  display: block !important;
 }
 
 .purple {
-	background-color: #091f36;
+  background-color: #091f36;
 }
 
 .logo {
-	margin: 5px 0px;
-	height: 20px;
-	width: auto;
+  margin: 5px 0px;
+  height: 20px;
+  width: auto;
 }
 
 .noDisplay {
-	display: none !important;
+  display: none !important;
 }
