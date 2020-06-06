@@ -88,7 +88,7 @@ export default function work({ workList }) {
                     <img data-aos='fade-down' src={`${work.images.full}`} />
                   </div>
                   <span style={{ height: '30px' }}>
-                    {index < worklist.length - 1 ? (
+                    {index < worklist.length - 1 && (
                       <Button
                         shape='circle'
                         type='ghost'
@@ -104,8 +104,6 @@ export default function work({ workList }) {
                             });
                         }}
                       />
-                    ) : (
-                      <p style={{ justifySelf: 'center' }}>Keep scrolling</p>
                     )}
                   </span>
                 </div>

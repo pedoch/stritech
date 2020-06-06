@@ -56,7 +56,7 @@ export async function getStaticPaths() {
 
   const id = pages.map((page) => page.slug);
 
-  const paths = id.map((id) => ({ params: { slug } }));
+  const paths = id.map((slug) => ({ params: { slug } }));
 
   return {
     paths,
