@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
+import Typing from 'react-typing-animation';
+
 import MainLayout from '../components/mainlayout/mainlayout';
 
 import styles from '../static/css/whyus.module.scss';
@@ -15,14 +17,18 @@ export default function services() {
         <div className={styles.container}>
           <section className={styles.section} style={{ paddingBottom: '0px' }}>
             <div className={styles.block}>
-              <h1 className={styles.title}>
-                We design and build software for foward thinking clients.
-              </h1>
+              <div className={styles.top}>
+                <Typing speed={1} blink={true} startDelay={500}>
+                  <h1 className={styles.title}>
+                    We design and build software for foward thinking clients.
+                  </h1>
+                </Typing>
+              </div>
               <div
                 className={[styles.service, styles.found].join(' ')}
                 style={{ margin: '20px 0px' }}
               >
-                <div>
+                <div data-aos='fade-up'>
                   <p>Concieved</p>
                   <h1 className={styles.value}>2018</h1>
                 </div>
@@ -41,13 +47,12 @@ export default function services() {
           <section className={styles.section}>
             <div className={styles.block}>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <div className={styles.text}>
+                <div className={styles.text} data-aos='fade-left'>
                   <h1>Perfect Investment</h1>
                   <p>
-                    You’re investing more than just money — it’s also branding,
-                    intelligence, functionality, innovation, and the expanding
-                    potential of your business. StriTech conveys this investment
-                    to impact your audience.
+                    You’re investing more than just money — it’s also branding, intelligence,
+                    functionality, innovation, and the expanding potential of your business.
+                    StriTech conveys this investment to impact your audience.
                   </p>
                 </div>
                 <img src='../static/images/design10.svg' />
@@ -58,16 +63,14 @@ export default function services() {
             <div className={styles.block}>
               <div className={[styles.service].join(' ')}>
                 <img src='../static/images/design11.svg' />
-                <div className={styles.text}>
+                <div className={styles.text} data-aos='fade-right'>
                   <h1>Full-stack Engineering</h1>
                   <p>
-                    Engineering is hard so leave it to us. We provide full-stack
-                    engineering services, get everything you need under one
-                    roof. Everything under one roof means less risk and a team
-                    to ensure forver forward momentum. From application strategy
-                    to design to full stack engineering, StriTech handles all
-                    aspects of digital product so you can focus on what you know
-                    best - running your business.
+                    Engineering is hard so leave it to us. We provide full-stack engineering
+                    services, get everything you need under one roof. Everything under one roof
+                    means less risk and a team to ensure forver forward momentum. From application
+                    strategy to design to full stack engineering, StriTech handles all aspects of
+                    digital product so you can focus on what you know best - running your business.
                   </p>
                 </div>
               </div>
@@ -76,15 +79,14 @@ export default function services() {
           <section className={styles.section}>
             <div className={styles.block}>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <div className={styles.text}>
+                <div className={styles.text} data-aos='fade-left'>
                   <h1>Clean Fast Apps</h1>
                   <p>
-                    We make apps that depict your business objectives. Give us
-                    your most ambitious ideas and watch them turn to excellent
-                    digital products that are fast, secure, robust, scalable,
-                    and maintainable. With detailed attention to quality, we
-                    develop software, mobile, and web apps that work flawlessly
-                    with your eco-system.
+                    We make apps that depict your business objectives. Give us your most ambitious
+                    ideas and watch them turn to excellent digital products that are fast, secure,
+                    robust, scalable, and maintainable. With detailed attention to quality, we
+                    develop software, mobile, and web apps that work flawlessly with your
+                    eco-system.
                   </p>
                 </div>
                 <img src='../static/images/design12.svg' />
@@ -99,42 +101,31 @@ export default function services() {
                 style={{ margin: '20px 0px' }}
               >
                 <div className={styles.attention}>
-                  <img
-                    src='../static/images/design13.svg'
-                    style={{ height: '200px' }}
-                  />
-                  <h2>how it looks.</h2>
-                  <p>
-                    It’s about more than just the visual. We research new design
-                    patterns everday, so the digital products we create don’t
-                    just look stunning, they showcase creativity and purpose.
+                  <img src='../static/images/design13.svg' style={{ height: '200px' }} />
+                  <h2 data-aos='fade-up-right'>how it looks.</h2>
+                  <p data-aos='fade-up-right'>
+                    It’s about more than just the visual. We research new design patterns everday,
+                    so the digital products we create don’t just look stunning, they showcase
+                    creativity and purpose.
                   </p>
                 </div>
 
                 <div className={styles.attention}>
-                  <img
-                    src='../static/images/design14.svg'
-                    style={{ height: '200px' }}
-                  />
-                  <h2>how it works.</h2>
-                  <p>
-                    Easy usability lurks at the intersection of design and
-                    innovation, keeping the audiences engaged. StriTech's
-                    process adds that extra touch of desire that our competitors
-                    lack.
+                  <img src='../static/images/design14.svg' style={{ height: '200px' }} />
+                  <h2 data-aos='fade-up'>how it works.</h2>
+                  <p data-aos='fade-up'>
+                    Easy usability lurks at the intersection of design and innovation, keeping the
+                    audiences engaged. StriTech's process adds that extra touch of desire that our
+                    competitors lack.
                   </p>
                 </div>
                 <div className={styles.attention}>
-                  <img
-                    src='../static/images/design16.svg'
-                    style={{ height: '200px' }}
-                  />
-                  <h2>how it feels.</h2>
-                  <p>
-                    Our code creates secure, scalable systems that are composed
-                    with utmost care. StriTech engineers build software that
-                    transcend beyond functional, they’re precision machines of
-                    perfection.
+                  <img src='../static/images/design16.svg' style={{ height: '200px' }} />
+                  <h2 data-aos='fade-up-left'>how it feels.</h2>
+                  <p data-aos='fade-up-left'>
+                    Our code creates secure, scalable systems that are composed with utmost care.
+                    StriTech engineers build software that transcend beyond functional, they’re
+                    precision machines of perfection.
                   </p>
                 </div>
               </div>
@@ -161,22 +152,20 @@ export default function services() {
 					</section> */}
           <section className={styles.section}>
             <div className={styles.block}>
-              <h1 className={styles.title}>Our Leadership</h1>
+              <h1 className={styles.title} style={{ marginBottom: '20px', fontSize: '30px' }}>
+                Our Leadership
+              </h1>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <img
-                  src='../static/images/CEO.jpg'
-                  style={{ maxWidth: '300px', margin: '5px' }}
-                />
-                <div className={styles.text}>
+                <img src='../static/images/CEO.jpg' style={{ maxWidth: '300px', margin: '5px' }} />
+                <div className={styles.text} data-aos='zoom-in-up'>
                   <h1 className={styles.name}>
                     Pedro Ogheneochuko <span>Founder/CEO</span>
                   </h1>
                   <p>
-                    "I've always had the dream of build worldclass software and
-                    StriTech is just my way of visualizing that dream.
-                    Programming is such a beautiful thing and I love that I can
-                    use my skills to helps companies and businesses grow their
-                    online presence through a lines of logic."
+                    I've always had the dream of build worldclass software and StriTech is just my
+                    way of visualizing that dream. Programming is such a beautiful thing and I love
+                    that I can use my skills to helps companies and businesses grow their online
+                    presence through a lines of logic.
                   </p>
                 </div>
               </div>

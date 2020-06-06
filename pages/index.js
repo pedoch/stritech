@@ -9,6 +9,7 @@ import {
   TeamOutlined,
   SettingOutlined,
 } from '@ant-design/icons';
+import Typing from 'react-typing-animation';
 
 import MainLayout from '../components/mainlayout/mainlayout';
 import Card from '../components/card/card';
@@ -22,22 +23,21 @@ const Home = () => {
       text: 'We deisgn simple modern responsive web and mobile applications.',
       icon: <LayoutOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
       link: '/services/#web-mobile-design',
+      aos: 'fade-right',
     },
     {
       title: 'Web & Mobile Development',
-      text:
-        'We develop functional, scalable and efficient web and mobile applications.',
+      text: 'We develop functional, scalable and efficient web and mobile applications.',
       icon: <CodeOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
       link: '/services/#web-mobile-development',
+      aos: 'fade-up',
     },
     {
       title: 'Ecommerce Sites',
-      text:
-        'We build user friendly e-commerce sites from small to large businesses.',
-      icon: (
-        <ShoppingCartOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />
-      ),
+      text: 'We build user friendly e-commerce sites from small to large businesses.',
+      icon: <ShoppingCartOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
       link: '/services/#ecommerce',
+      aos: 'fade-left',
     },
     // {
     // 	title: 'Design Consultation',
@@ -47,10 +47,10 @@ const Home = () => {
     // },
     {
       title: 'Web & Mobile Maintenance',
-      text:
-        'We maintain already built web and mobile applications and help with scalability.',
+      text: 'We maintain already built web and mobile applications and help with scalability.',
       icon: <SettingOutlined style={{ fontSize: '50px', color: '#FEC75C' }} />,
       link: '/services/#web-mobile-maintenance',
+      aos: 'fade-down',
     },
   ];
 
@@ -62,14 +62,24 @@ const Home = () => {
       <div className={styles.indexMain}>
         <div className={styles.container}>
           <span className={[styles.typewriterTitle].join(' ')}>
-            <h1>Design, functionality and everything nice...</h1>
+            <Typing speed={1} blink={true} startDelay={500}>
+              <h1>
+                We bring <Typing.Delay delay={500} />
+                breathtaking designs.
+                <Typing.Backspace count={21} delay={1000} />
+                clear-cut engineering.
+                <Typing.Backspace count={22} delay={1000} />
+                cutting edge software.
+                <Typing.Backspace count={22} delay={1000} />
+                your dreams to life...
+              </h1>
+            </Typing>
           </span>
           <section className={styles.section}>
             <div className={[styles.block, styles.reverseWrap].join(' ')}>
-              <p>
-                StriTech, conceived in 2018, is a digital product and innovation
-                agency focused on giving you entrensic design and functional web
-                and mobile applications.
+              <p data-aos='fade-left'>
+                StriTech, conceived in 2018, is a digital product and innovation agency focused on
+                giving you entrensic design and functional web and mobile applications.
               </p>
               <img src='../static/images/design1.svg' alt='minions designing' />
             </div>
@@ -81,11 +91,10 @@ const Home = () => {
           >
             <div className={[styles.block].join(' ')}>
               <img src='../static/images/design2.svg' alt='data analysis' />
-              <p>
-                Our elite firm provides excellent services in design
-                consultation, user interface and experience design, and full
-                stack software engineering to bring your brilliant digital ideas
-                into being for forward-thinking clients.
+              <p data-aos='fade-right'>
+                Our elite firm provides excellent services in design consultation, user interface
+                and experience design, and full stack software engineering to bring your brilliant
+                digital ideas into being for forward-thinking clients.
               </p>
             </div>
           </section>
@@ -99,7 +108,7 @@ const Home = () => {
               {whatWeDoList.map((item, index) => {
                 return (
                   <Link key={index} href={item.link}>
-                    <a>
+                    <a data-aos={item.aos}>
                       <Card>
                         <section className={styles.cardLay}>
                           <h3>{item.title}</h3>
