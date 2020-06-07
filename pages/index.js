@@ -72,7 +72,7 @@ const Home = () => {
       <div className={styles.indexMain}>
         <div className={styles.container}>
           <span className={[styles.typewriterTitle].join(' ')}>
-            <Typing speed={10} blink={true} startDelay={500}>
+            <Typing speed={50} blink={true} startDelay={500}>
               <h1>
                 We bring <Typing.Delay delay={1000} />
                 breathtaking designs.

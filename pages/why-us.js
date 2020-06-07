@@ -28,7 +28,7 @@ export default function services() {
           <section className={styles.section} style={{ paddingBottom: '0px' }}>
             <div className={styles.block}>
               <div className={styles.top}>
-                <Typing speed={10} blink={true} startDelay={500}>
+                <Typing speed={50} blink={true} startDelay={500}>
                   <h1 className={styles.title}>
                     We design and build software for foward thinking clients.
                   </h1>

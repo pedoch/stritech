@@ -27,7 +27,7 @@ export default function services() {
         <div className={styles.container}>
           <section className={styles.section} style={{ paddingBottom: '0px' }}>
             <div className={styles.block} style={{ minHeight: '200px' }}>
-              <Typing speed={10} blink={true} startDelay={500}>
+              <Typing speed={50} blink={true} startDelay={500}>
                 <h1 className={styles.title}>Our Custom Business Software Solutions</h1>
               </Typing>
               <h3 className={styles.subtitle} data-aos='fade-down' id='web-mobile-design'>

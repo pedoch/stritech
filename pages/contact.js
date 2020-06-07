@@ -94,7 +94,7 @@ export default function contact() {
           <section className={styles.section}>
             <div className={styles.block}>
               <div style={{ height: '150px' }}>
-                <Typing speed={10} blink={true} startDelay={500}>
+                <Typing speed={50} blink={true} startDelay={500}>
                   <p>Tell us about your project...</p>
                   <h1>We're All Ears</h1>
                 </Typing>
