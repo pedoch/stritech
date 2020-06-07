@@ -16,9 +16,9 @@ export default function work({ workList }) {
     const AOS = isBrowser ? require('aos') : undefined;
 
     AOS.init({
-      disable: 'mobile',
+      // disable: 'mobile',
       once: false,
-      mirror: false,
+      mirror: true,
       duration: 1000,
     });
     scrollToComponent = require('react-scroll-to-component');

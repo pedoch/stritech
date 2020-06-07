@@ -13,7 +13,7 @@ export default function mainlayout({ children }) {
     const AOS = isBrowser ? require('aos') : undefined;
 
     AOS.init({
-      disable: 'mobile',
+      // disable: 'mobile',
       once: true,
       duration: 1000,
     });

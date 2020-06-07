@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -17,6 +17,16 @@ import Card from '../components/card/card';
 import styles from '../static/css/index.module.scss';
 
 const Home = () => {
+  useEffect(() => {
+    const isBrowser = typeof document !== 'undefined';
+    const AOS = isBrowser ? require('aos') : undefined;
+
+    AOS.init({
+      once: true,
+      mirror: false,
+      duration: 1000,
+    });
+  });
   const whatWeDoList = [
     {
       title: 'Web & Mobile Design',
@@ -62,15 +72,15 @@ const Home = () => {
       <div className={styles.indexMain}>
         <div className={styles.container}>
           <span className={[styles.typewriterTitle].join(' ')}>
-            <Typing speed={1} blink={true} startDelay={500}>
+            <Typing speed={10} blink={true} startDelay={500}>
               <h1>
-                We bring <Typing.Delay delay={500} />
+                We bring <Typing.Delay delay={1000} />
                 breathtaking designs.
-                <Typing.Backspace count={21} delay={1000} />
+                <Typing.Backspace count={21} delay={2000} />
                 clear-cut engineering.
-                <Typing.Backspace count={22} delay={1000} />
+                <Typing.Backspace count={22} delay={2000} />
                 cutting edge software.
-                <Typing.Backspace count={22} delay={1000} />
+                <Typing.Backspace count={22} delay={2000} />
                 your dreams to life...
               </h1>
             </Typing>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 import Typing from 'react-typing-animation';
@@ -8,6 +8,16 @@ import MainLayout from '../components/mainlayout/mainlayout';
 import styles from '../static/css/services.module.scss';
 
 export default function services() {
+  useEffect(() => {
+    const isBrowser = typeof document !== 'undefined';
+    const AOS = isBrowser ? require('aos') : undefined;
+
+    AOS.init({
+      once: true,
+      mirror: false,
+      duration: 1000,
+    });
+  });
   return (
     <MainLayout>
       <Head>
@@ -17,7 +27,7 @@ export default function services() {
         <div className={styles.container}>
           <section className={styles.section} style={{ paddingBottom: '0px' }}>
             <div className={styles.block} style={{ minHeight: '200px' }}>
-              <Typing speed={1} blink={true} startDelay={500}>
+              <Typing speed={10} blink={true} startDelay={500}>
                 <h1 className={styles.title}>Our Custom Business Software Solutions</h1>
               </Typing>
               <h3 className={styles.subtitle} data-aos='fade-down' id='web-mobile-design'>

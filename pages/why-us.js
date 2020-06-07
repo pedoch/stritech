@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 import Typing from 'react-typing-animation';
@@ -8,6 +8,16 @@ import MainLayout from '../components/mainlayout/mainlayout';
 import styles from '../static/css/whyus.module.scss';
 
 export default function services() {
+  useEffect(() => {
+    const isBrowser = typeof document !== 'undefined';
+    const AOS = isBrowser ? require('aos') : undefined;
+
+    AOS.init({
+      once: true,
+      mirror: false,
+      duration: 1000,
+    });
+  });
   return (
     <MainLayout>
       <Head>
@@ -18,7 +28,7 @@ export default function services() {
           <section className={styles.section} style={{ paddingBottom: '0px' }}>
             <div className={styles.block}>
               <div className={styles.top}>
-                <Typing speed={1} blink={true} startDelay={500}>
+                <Typing speed={10} blink={true} startDelay={500}>
                   <h1 className={styles.title}>
                     We design and build software for foward thinking clients.
                   </h1>
