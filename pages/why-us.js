@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
 import Head from 'next/head';
-
+import React, { useEffect } from 'react';
 import Typing from 'react-typing-animation';
-
 import MainLayout from '../components/mainlayout/mainlayout';
-
 import styles from '../static/css/whyus.module.scss';
 
 export default function services() {
@@ -38,7 +35,7 @@ export default function services() {
                 className={[styles.service, styles.found].join(' ')}
                 style={{ margin: '20px 0px' }}
               >
-                <div data-aos='fade-up'>
+                <div data-aos="fade-up">
                   <p>Concieved</p>
                   <h1 className={styles.value}>2018</h1>
                 </div>
@@ -57,7 +54,7 @@ export default function services() {
           <section className={styles.section}>
             <div className={styles.block}>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <div className={styles.text} data-aos='fade-left'>
+                <div className={styles.text} data-aos="fade-left" style={{ textAlign: 'left' }}>
                   <h1>Perfect Investment</h1>
                   <p>
                     You’re investing more than just money — it’s also branding, intelligence,
@@ -65,15 +62,15 @@ export default function services() {
                     StriTech conveys this investment to impact your audience.
                   </p>
                 </div>
-                <img src='../static/images/design10.svg' />
+                <img src="../static/images/design10.svg" />
               </div>
             </div>
           </section>
           <section className={styles.section}>
             <div className={styles.block}>
               <div className={[styles.service].join(' ')}>
-                <img src='../static/images/design11.svg' />
-                <div className={styles.text} data-aos='fade-right'>
+                <img src="../static/images/design11.svg" />
+                <div className={styles.text} data-aos="fade-right" style={{ textAlign: 'right' }}>
                   <h1>Full-stack Engineering</h1>
                   <p>
                     Engineering is hard so leave it to us. We provide full-stack engineering
@@ -89,7 +86,7 @@ export default function services() {
           <section className={styles.section}>
             <div className={styles.block}>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <div className={styles.text} data-aos='fade-left'>
+                <div className={styles.text} data-aos="fade-left" style={{ textAlign: 'left' }}>
                   <h1>Clean Fast Apps</h1>
                   <p>
                     We make apps that depict your business objectives. Give us your most ambitious
@@ -99,7 +96,7 @@ export default function services() {
                     eco-system.
                   </p>
                 </div>
-                <img src='../static/images/design12.svg' />
+                <img src="../static/images/design12.svg" />
               </div>
             </div>
           </section>
@@ -111,9 +108,9 @@ export default function services() {
                 style={{ margin: '20px 0px' }}
               >
                 <div className={styles.attention}>
-                  <img src='../static/images/design13.svg' style={{ height: '200px' }} />
-                  <h2 data-aos='fade-up-right'>how it looks.</h2>
-                  <p data-aos='fade-up-right'>
+                  <img src="../static/images/design13.svg" style={{ height: '200px' }} />
+                  <h2 data-aos="fade-up-right">how it looks.</h2>
+                  <p data-aos="fade-up-right" style={{ textAlign: 'justify' }}>
                     It’s about more than just the visual. We research new design patterns everday,
                     so the digital products we create don’t just look stunning, they showcase
                     creativity and purpose.
@@ -121,18 +118,18 @@ export default function services() {
                 </div>
 
                 <div className={styles.attention}>
-                  <img src='../static/images/design14.svg' style={{ height: '200px' }} />
-                  <h2 data-aos='fade-up'>how it works.</h2>
-                  <p data-aos='fade-up'>
+                  <img src="../static/images/design14.svg" style={{ height: '200px' }} />
+                  <h2 data-aos="fade-up">how it works.</h2>
+                  <p data-aos="fade-up" style={{ textAlign: 'justify' }}>
                     Easy usability lurks at the intersection of design and innovation, keeping the
                     audiences engaged. StriTech's process adds that extra touch of desire that our
                     competitors lack.
                   </p>
                 </div>
                 <div className={styles.attention}>
-                  <img src='../static/images/design16.svg' style={{ height: '200px' }} />
-                  <h2 data-aos='fade-up-left'>how it feels.</h2>
-                  <p data-aos='fade-up-left'>
+                  <img src="../static/images/design16.svg" style={{ height: '200px' }} />
+                  <h2 data-aos="fade-up-left">how it feels.</h2>
+                  <p data-aos="fade-up-left" style={{ textAlign: 'justify' }}>
                     Our code creates secure, scalable systems that are composed with utmost care.
                     StriTech engineers build software that transcend beyond functional, they’re
                     precision machines of perfection.
@@ -166,12 +163,13 @@ export default function services() {
                 Our Leadership
               </h1>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <img src='../static/images/CEO.jpg' style={{ maxWidth: '300px', margin: '5px' }} />
-                <div className={styles.text} data-aos='zoom-in-up'>
-                  <h1 className={styles.name}>
-                    Pedro Ogheneochuko <span>Founder/CEO</span>
+                <img src="../static/images/CEO.jpg" style={{ maxWidth: '300px', margin: '10px' }} />
+                <div className={styles.text} data-aos="zoom-in-up">
+                  <h1 className={styles.name} style={{ textAlign: 'left' }}>
+                    Pedro Ogheneochuko
                   </h1>
-                  <p>
+                  <p style={{ textAlign: 'left' }}>Founder/CEO</p>
+                  <p style={{ textAlign: 'justify' }}>
                     I've always had the dream of build worldclass software and StriTech is just my
                     way of visualizing that dream. Programming is such a beautiful thing and I love
                     that I can use my skills to helps companies and businesses grow their online

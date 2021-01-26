@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
 import Head from 'next/head';
-
+import React, { useEffect } from 'react';
 import Typing from 'react-typing-animation';
-
 import MainLayout from '../components/mainlayout/mainlayout';
-
 import styles from '../static/css/services.module.scss';
 
 export default function services() {
@@ -30,7 +27,7 @@ export default function services() {
               <Typing speed={50} blink={true} startDelay={500}>
                 <h1 className={styles.title}>Our Custom Business Software Solutions</h1>
               </Typing>
-              <h3 className={styles.subtitle} data-aos='fade-down' id='web-mobile-design'>
+              <h3 className={styles.subtitle} data-aos="fade-down" id="web-mobile-design">
                 We’re frontiers in engineering and design but our most valuable service is how we
                 combine these disciplines to deliver for our clients.
               </h3>
@@ -41,7 +38,7 @@ export default function services() {
             <div className={styles.block}>
               <h1 style={{ marginBottom: '40px' }}>Web & Mobile Design</h1>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <div className={styles.text} data-aos='fade-left'>
+                <div className={styles.text} data-aos="fade-left" style={{ textAlign: 'left' }}>
                   <p>
                     Designing is not just painting your ideas on a canvas, it's taking ideas to a
                     whole new level of creativity.
@@ -56,17 +53,17 @@ export default function services() {
                     meeting the requirements of our clients.
                   </p>
                 </div>
-                <img src='../static/images/design5.svg' />
+                <img src="../static/images/design5.svg" />
               </div>
             </div>
           </section>
-          <span className={styles.triangleReverse} id='web-mobile-development'></span>
+          <span className={styles.triangleReverse} id="web-mobile-development"></span>
           <section className={[styles.section, styles.primary].join(' ')}>
             <div className={styles.block}>
               <h1 style={{ marginBottom: '40px' }}>Web & Mobile Development</h1>
               <div className={[styles.service].join(' ')}>
-                <img src='../static/images/design6.svg' />
-                <div className={styles.text} data-aos='fade-right'>
+                <img src="../static/images/design6.svg" />
+                <div className={styles.text} data-aos="fade-right" style={{ textAlign: 'right' }}>
                   <p>
                     Quality engineering doesn't grow on trees. We provide it to our clients
                     everyday.
@@ -83,12 +80,12 @@ export default function services() {
               </div>
             </div>
           </section>
-          <span className={styles.triangle} id='ecommerce'></span>
+          <span className={styles.triangle} id="ecommerce"></span>
           <section className={[styles.section].join(' ')}>
             <div className={styles.block}>
               <h1 style={{ marginBottom: '40px' }}>E-commerce Sites</h1>
               <div className={[styles.service, styles.reverseWrap].join(' ')}>
-                <div className={styles.text} data-aos='fade-left'>
+                <div className={styles.text} data-aos="fade-left" style={{ textAlign: 'left' }}>
                   <p>
                     A lot of business owners are moving their shop to the web. You can trust us to
                     help you join the trend.
@@ -103,17 +100,17 @@ export default function services() {
                     customers base.
                   </p>
                 </div>
-                <img src='../static/images/design7.svg' />
+                <img src="../static/images/design7.svg" />
               </div>
             </div>
           </section>
-          <span className={styles.triangleReverse} id='web-mobile-maintenance'></span>
+          <span className={styles.triangleReverse} id="web-mobile-maintenance"></span>
           <section className={[styles.section, styles.primary].join(' ')}>
             <div className={styles.block}>
               <h1 style={{ marginBottom: '40px' }}>Web & Mobile Maintenance</h1>
               <div className={[styles.service].join(' ')}>
-                <img src='../static/images/design9.svg' />
-                <div className={styles.text} data-aos='fade-right'>
+                <img src="../static/images/design9.svg" />
+                <div className={styles.text} data-aos="fade-right" style={{ textAlign: 'right' }}>
                   <p>You have a site that you need fixed or managed? We got you covered.</p>
                   <p>
                     A lot of web and mobile applications are either outdated or are unable to handle

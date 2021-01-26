@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-
-import { Drawer, Button } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
-
+import { Button, Drawer } from 'antd';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import styles from './nav.module.scss';
 
 const links = [
@@ -41,9 +39,18 @@ const Nav = () => {
   return (
     <nav
       className={[styles.nav].join(' ')}
-      style={path === '/work' ? { backgroundColor: 'rgba(255,255,255,0)', color: '#f9f9f9' } : {}}
+      style={
+        path === '/work'
+          ? {
+              backgroundColor: 'rgba(255,255,255,0)',
+              color: '#f9f9f9',
+              paddingTop: '20px',
+              paddingBottom: '20px',
+            }
+          : { paddingTop: '20px', paddingBottom: '20px' }
+      }
     >
-      <Link href='/'>
+      <Link href="/">
         <a>
           <img
             className={styles.logo}
@@ -69,15 +76,15 @@ const Nav = () => {
         ))}
       </ul>
       <Button
-        type='primary'
+        type="primary"
         className={[styles.menu, windowWidth < 690 && styles.display].join(' ')}
         onClick={onShowDrawer}
       >
         <MenuOutlined style={{ fontSize: '16px', color: '#040404' }} />
       </Button>
       <Drawer
-        title='Menu'
-        placement='right'
+        title="Menu"
+        placement="right"
         closable={true}
         onClose={onDrawerClose}
         visible={drawerVisible}

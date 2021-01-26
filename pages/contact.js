@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-
-import { Input, InputNumber, Button } from 'antd';
+import { Button, Input, InputNumber } from 'antd';
 import axios from 'axios';
-import { toaster, Spinner } from 'evergreen-ui';
+import { Spinner, toaster } from 'evergreen-ui';
+import Head from 'next/head';
+import React, { useState } from 'react';
 import Typing from 'react-typing-animation';
-
 import MainLayout from '../components/mainlayout/mainlayout';
-
 import styles from '../static/css/contact.module.scss';
 
 export default function contact() {
@@ -112,81 +109,81 @@ export default function contact() {
                   <section>
                     <span>
                       <Input
-                        id='name'
-                        name='name'
+                        id="name"
+                        name="name"
                         className={styles.input}
                         value={form.name}
                         required={true}
                         onChange={(e) => {
                           handleChange('name', e.target.value);
                         }}
-                        placeholder='Name...'
+                        placeholder="Name..."
                       />
                     </span>
                     <span>
                       <Input
-                        id='email'
-                        name='email'
+                        id="email"
+                        name="email"
                         className={styles.input}
                         value={form.email}
                         required={true}
-                        type='email'
+                        type="email"
                         onChange={(e) => {
                           handleChange('email', e.target.value);
                         }}
-                        placeholder='Email...'
+                        placeholder="Email..."
                       />
                     </span>
                   </section>
                   <section>
                     <span>
                       <Input
-                        id='company'
-                        name='company'
+                        id="company"
+                        name="company"
                         className={styles.input}
                         value={form.company}
                         onChange={(e) => {
                           handleChange('company', e.target.value);
                         }}
-                        placeholder='Company (optional)'
+                        placeholder="Company (optional)"
                       />
                     </span>
                     <span>
                       <Input
-                        id='number'
-                        name='number'
+                        id="number"
+                        name="number"
                         className={styles.input}
                         value={form.number}
                         onChange={(e) => {
                           handleChange('number', e.target.value);
                         }}
-                        placeholder='Phone number (optional)'
+                        placeholder="Phone number (optional)"
                       />
                     </span>
                   </section>
                   <section>
                     <span>
                       <Input
-                        id='about_us'
-                        name='about_us'
+                        id="about_us"
+                        name="about_us"
                         className={styles.input}
                         value={form.about_us}
                         required={true}
                         onChange={(e) => {
                           handleChange('about_us', e.target.value);
                         }}
-                        placeholder='How did you hear about us?'
+                        placeholder="How did you hear about us?"
                       />
                     </span>
                     <span>
                       <InputNumber
-                        id='budget'
-                        name='budget'
+                        id="budget"
+                        name="budget"
                         className={styles.input}
                         min={1}
                         value={form.budget}
                         required={true}
-                        type='number'
+                        type="number"
                         onChange={(value) => {
                           handleChange('budget', value);
                         }}
@@ -197,21 +194,21 @@ export default function contact() {
                   <section>
                     <span>
                       <Input.TextArea
-                        id='project'
-                        name='project'
+                        id="project"
+                        name="project"
                         className={[styles.textarea, styles.input].join(' ')}
                         value={form.project}
                         required={true}
                         onChange={(e) => {
                           handleChange('project', e.target.value);
                         }}
-                        placeholder='Tell us about your project...'
+                        placeholder="Tell us about your project..."
                       />
                     </span>
                   </section>
                 </div>
                 <section>
-                  <Button htmlType='submit' size='large'>
+                  <Button htmlType="submit" size="large">
                     {loading ? <Spinner size={24} /> : 'Mail It!!!'}
                   </Button>
                 </section>

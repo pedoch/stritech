@@ -1,19 +1,15 @@
-import React, { useEffect } from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-
 import {
-  LayoutOutlined,
   CodeOutlined,
-  ShoppingCartOutlined,
-  TeamOutlined,
+  LayoutOutlined,
   SettingOutlined,
+  ShoppingCartOutlined,
 } from '@ant-design/icons';
+import Head from 'next/head';
+import Link from 'next/link';
+import React, { useEffect } from 'react';
 import Typing from 'react-typing-animation';
-
-import MainLayout from '../components/mainlayout/mainlayout';
 import Card from '../components/card/card';
-
+import MainLayout from '../components/mainlayout/mainlayout';
 import styles from '../static/css/index.module.scss';
 
 const Home = () => {
@@ -86,12 +82,19 @@ const Home = () => {
             </Typing>
           </span>
           <section className={styles.section}>
-            <div className={[styles.block, styles.reverseWrap].join(' ')}>
-              <p data-aos='fade-left'>
+            <div
+              className={[styles.block, styles.reverseWrap].join(' ')}
+              style={{ padding: '10px' }}
+            >
+              <p data-aos="fade-left" style={{ textAlign: 'left' }}>
                 StriTech, conceived in 2018, is a digital product and innovation agency focused on
                 giving you entrensic design and functional web and mobile applications.
               </p>
-              <img src='../static/images/design1.svg' alt='minions designing' />
+              <img
+                src="../static/images/design1.svg"
+                alt="minions designing"
+                style={{ marginBottom: '40px' }}
+              />
             </div>
           </section>
           <span className={styles.triangleReverse}></span>
@@ -99,9 +102,13 @@ const Home = () => {
             className={[styles.section, styles.primary].join(' ')}
             style={{ backgroundColor: '#FBE2B1' }}
           >
-            <div className={[styles.block].join(' ')}>
-              <img src='../static/images/design2.svg' alt='data analysis' />
-              <p data-aos='fade-right'>
+            <div className={[styles.block].join(' ')} style={{ padding: '10px' }}>
+              <img
+                src="../static/images/design2.svg"
+                alt="data analysis"
+                style={{ marginBottom: '40px' }}
+              />
+              <p data-aos="fade-right" style={{ textAlign: 'right' }}>
                 Our elite firm provides excellent services in design consultation, user interface
                 and experience design, and full stack software engineering to bring your brilliant
                 digital ideas into being for forward-thinking clients.
