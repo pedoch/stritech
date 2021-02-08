@@ -112,31 +112,31 @@ const Footer = () => {
       {/* <span className={styles.triangleReverse}></span> */}
       <section
         className={[styles.section, styles.primary, path === '/contact' && styles.nodisplay].join(
-          ' '
+          ' ',
         )}
       >
         <div className={[styles.block, styles.contact].join(' ')}>
           <p>Ready to get started?</p>
-          <Link href='/contact'>
+          <Link href="/contact">
             <a>
               <h1>Tell Us About Your Project...</h1>
             </a>
           </Link>
         </div>
         <div className={[styles.block].join(' ')}>
-          <img className={styles.hero} src='../static/images/design4.svg' alt='contact us' />
+          <img className={styles.hero} src="../static/images/design4.svg" alt="contact us" />
         </div>
       </section>
       <div className={styles.info}>
         <span className={styles.intro}>
-          <img src='../../static/images/logofull.png' className={styles.logo} />
+          <img src="../../static/images/logofull.png" className={styles.logo} />
           <p>Take your ideas to the next level</p>
           <h3>Let's work together...</h3>
           <p style={{ marginBottom: '5px' }}>
-            Email: <a href='mailto:pedroogheneochuko@gmail.com'>pedroogheneochuko@gmail.com</a>
+            Email: <a href="mailto:stritechng@gmail.com">stritechng@gmail.com</a>
           </p>
           <p>
-            Phone: <a href='tel:+2349073707630'>+2349073707630</a>
+            Phone: <a href="tel:+2349073707630">+2349073707630</a>
           </p>
         </span>
         {footerLinks.map((cat, index) => {
@@ -163,7 +163,7 @@ const Footer = () => {
             <ul>
               {tools.links.map((link, index) => {
                 return (
-                  <a href={link.link} key={index} target='_blank'>
+                  <a href={link.link} key={index} target="_blank">
                     <li>{link.text}</li>
                   </a>
                 );
